@@ -6,7 +6,7 @@ services:
     image: daocloud.io/library/mysql:5.7.5-m15 #M1芯片可以采用这个镜像
     # image: mysql:5.7 #一般电脑可以用这个镜像
     ports:
-      - 3306:3306
+      - 13306:3306
     # 环境变量
     environment:
       TZ: Asia/Shanghai
@@ -39,7 +39,7 @@ services:
     # image: daocloud.io/library/redis:6.0.5-alpine
     # image: redis:5.0
     ports:
-      - "6379:6379"
+      - "16379:6379"
     command: redis-server /usr/local/etc/redis/redis.conf
     volumes:
       # - ./redis/data:/data #挂载数据目录到本地
